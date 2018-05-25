@@ -10,7 +10,7 @@
 5. You're done!
 
 ### Deploying Beta Versions
-Sometimes we need to deploy potentially unstable versions of editor for testing or deploying to topic branches. To do that, please:
+Sometimes we need to deploy potentially unstable versions for testing or deploying to topic branches. To do that, please:
 1. Start from whatever branch you want to cut a beta version of
 2. Run `npm run revbeta`
 3. Note the version hash output, which looks like `v1.2.3-my-branch-name.1`. This is the same version number that CircleCI will deploy to npm. You can use this to update the `package.json` of a project beta that relies on this component
