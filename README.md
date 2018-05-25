@@ -1,4 +1,23 @@
-# officegen [![npm version](https://badge.fury.io/js/officegen.svg)](https://badge.fury.io/js/officegen) [![Build Status](https://travis-ci.org/Ziv-Barber/officegen.png?branch=master)](https://travis-ci.org/Ziv-Barber/officegen) [![Dependencies Status](https://gemnasium.com/Ziv-Barber/officegen.png)](https://gemnasium.com/Ziv-Barber/officegen) [![Join the chat at https://gitter.im/officegen/Lobby](https://badges.gitter.im/officegen/Lobby.svg)](https://gitter.im/officegen/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
+# officegen [![npm version](https://badge.fury.io/js/officegen.svg)](https://badge.fury.io/js/officegen) [![Build Status](https://travis-ci.org/Ziv-Barber/officegen.png?branch=master)](https://travis-ci.org/Ziv-Barber/officegen) [![Dependencies Status](https://gemnasium.com/Ziv-Barber/officegen.png)](https://gemnasium.com/Ziv-Barber/officegen) [![Join the chat at https://gitter.im/officegen/Lobby](https://badges.gitter.im/officegen/Lobby.svg)](https://gitter.im/officegen/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+## Textio: How to Deploy
+
+### Deploying From Master
+1. Go to the `release` branch locally
+2. Make sure it's up-to-date by running a `git pull --rebase`
+3. Run `npm run rev`
+4. Note the version number output. This is the same version number that CircleCI will deploy to npm. You can use this to update the `package.json` of a project that relies on this component
+5. You're done!
+
+### Deploying Beta Versions
+Sometimes we need to deploy potentially unstable versions for testing or deploying to topic branches. To do that, please:
+1. Start from whatever branch you want to cut a beta version of
+2. Run `npm run revbeta`
+3. Note the version hash output, which looks like `v1.2.3-my-branch-name.1`. This is the same version number that CircleCI will deploy to npm. You can use this to update the `package.json` of a project beta that relies on this component
+
+*IMPORTANT: Make sure you don't merge your beta package.json version back into master - that's up to all of us to catch in the PR*
+
+## officegen
 
 This module can generate Office Open XML files for Microsoft Office 2007 and later.
 This module is not depend on any framework and you don't need to install Microsoft Office, so you can use it for any kind of javascript application. Also the output is a stream and not a file, not dependent on any output tool.
